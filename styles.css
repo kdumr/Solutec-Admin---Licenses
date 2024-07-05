@@ -1,0 +1,143 @@
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transições suaves */
+    position: relative; /* Permitir posicionamento absoluto do botão */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+    padding: 0 20px;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transições suaves */
+}
+
+.img-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+    padding: 0 20px;
+}
+
+.search-image {
+    padding: 20px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
+}
+
+.search-container {
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
+    display: flex; /* Tornar o container de pesquisa um flex container */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease; /* Transições suaves */
+}
+
+.search-label {
+    font-size: 13px;
+    margin-right: 10px; /* Adicionando espaço abaixo do texto */
+}
+
+.search-container input[type="text"] {
+    flex: 1;
+    background-color: #ffffff;
+    width: 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease; /* Transições suaves */
+}
+
+.search-container button {
+    padding: 10px 20px; /* Espaçamento interno */
+    margin-left: 10px; /* Margem à esquerda */
+    border: none; /* Remover borda */
+    border-radius: 4px; /* Bordas arredondadas */
+    background-color: #005ebc; /* Cor de fundo */
+    color: white; /* Cor do texto */
+    cursor: pointer; /* Cursor do mouse */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transições suaves */
+    min-width: 120px; /* Largura mínima */
+}
+
+/* Interruptor de modo noturno */
+.switch {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    margin-top: 10px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+/* Emoji no botão de alternância */
+.slider:before {
+    font-size: 18px;
+    line-height: 26px;
+    text-align: center;
+    color: #555;
+}
+
+input:checked + .slider:before {
+    content: "🌙";
+}
+
+.slider:before {
+    content: "☀️";
+}
